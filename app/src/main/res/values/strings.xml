@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Pipsqueak</string>
+    <color name="statusBarColor">#313745</color>
+</resources>
