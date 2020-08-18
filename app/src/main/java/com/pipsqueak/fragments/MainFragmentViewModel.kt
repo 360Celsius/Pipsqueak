@@ -14,6 +14,7 @@ class MainFragmentViewModel(
 
     fun getLocationByIPFromAPIandSaveToDB(){
         Coroutines.backGround{
+
             val locationDataByIPResponce : Response<LocationDataByIPresponce> = locationDataByIPRepository.getLocationDataByIP()
 
         }

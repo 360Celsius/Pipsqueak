@@ -1,6 +1,7 @@
 package com.pipsqueak
 
 import android.app.Application
+import com.pipsqueak.data.network.Externalapi
 import com.pipsqueak.data.network.LocationDataByIPapi
 import com.pipsqueak.data.repositories.LocationDataByIPRepository
 import com.pipsqueak.fragments.MainFragmentViewModelFactory
@@ -18,8 +19,9 @@ class PipsqueakApplication : Application(), KodeinAware {
         import(androidCoreModule(this@PipsqueakApplication))
 
         bind() from singleton { LocationDataByIPapi() }
+        bind() from singleton { Externalapi() }
         //bind() from singleton { DataBase(instance()) }
-        bind() from singleton { LocationDataByIPRepository(instance()) }
+        bind() from singleton { LocationDataByIPRepository(instance(),instance()) }
         bind() from provider { MainFragmentViewModelFactory(instance()) }
 
     }
