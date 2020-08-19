@@ -5,11 +5,12 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface LocationDataByIPapi {
 
-    @GET("json/45.34.147.118")
-    suspend fun getLocationByIP(): Response<LocationDataByIPresponce>
+    @GET("json/{ip}")
+    suspend fun getLocationByIP(@Path ("ip") ip: String): Response<LocationDataByIPresponce>
 
     companion object{
         operator fun invoke(): LocationDataByIPapi {

@@ -13,9 +13,9 @@ class LocationDataByIPRepository (
 
 ) {
 
-    suspend fun getLocationDataByIP(): Response<LocationDataByIPresponce> {
+    suspend fun getLocationDataByIP(ip: String): Response<LocationDataByIPresponce> {
 
-        val locationDataByIPresponce: Response<LocationDataByIPresponce> = apiLocationIP.getLocationByIP()
+        val locationDataByIPresponce: Response<LocationDataByIPresponce> = apiLocationIP.getLocationByIP(ip)
 
 
         Log.e("list_responce","symbol " + (locationDataByIPresponce.body()?.toString() ?: "N/A"))

@@ -18,7 +18,7 @@ class MainFragmentViewModel(
 
             val externalIp : Response<ExternaiIPresponce> = locationDataByIPRepository.getExternalIP()
             
-            val locationDataByIPResponce : Response<LocationDataByIPresponce> = locationDataByIPRepository.getLocationDataByIP()
+            val locationDataByIPResponce : Response<LocationDataByIPresponce> = locationDataByIPRepository.getLocationDataByIP(externalIp.body()?.ip.toString())
 
         }
     }
