@@ -9,7 +9,7 @@ import retrofit2.http.GET
 
 interface Externalapi {
 
-    @GET()
+    @GET("./")
     suspend fun getExternalIP(): Response<ExternaiIPresponce>
 
     companion object{
