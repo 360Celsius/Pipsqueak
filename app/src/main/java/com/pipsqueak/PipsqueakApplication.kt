@@ -1,8 +1,6 @@
 package com.pipsqueak
 
 import android.app.Application
-import com.pipsqueak.data.network.Externalapi
-import com.pipsqueak.data.network.LocationDataByIPapi
 import com.pipsqueak.data.repositories.LocationDataByIPRepository
 import com.pipsqueak.fragments.MainFragmentViewModelFactory
 import org.kodein.di.Kodein

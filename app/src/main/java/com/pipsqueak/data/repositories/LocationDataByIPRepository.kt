@@ -1,10 +1,6 @@
 package com.pipsqueak.data.repositories
 
 import android.util.Log
-import com.pipsqueak.data.network.Externalapi
-import com.pipsqueak.data.network.LocationDataByIPapi
-import com.pipsqueak.data.network.responce.ExternaiIPresponce
-import com.pipsqueak.data.network.responce.LocationDataByIPresponce
 import retrofit2.Response
 
 class LocationDataByIPRepository (
